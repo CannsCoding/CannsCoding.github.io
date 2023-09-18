@@ -8,7 +8,6 @@ body {
     max-width: 800px;
     margin: auto;
 }
-
 /* navigation menu */
 nav {
     background: rgb(255, 75, 75);
@@ -45,7 +44,7 @@ main {
 }
 .sidebar {
     margin-right: 25px;
-    padding: 10px;
+    padding: 20px;
 }
 .sidebar-img {
     width: 200px;
@@ -60,7 +59,7 @@ main {
 #interests {
     border: 4px rgb(255, 255, 255) ridge;
     border-radius: 40px;
-    padding: 8px;
+    padding: 8%;
 }
 h2, h3 {
     margin: 0px;
@@ -73,6 +72,28 @@ h2, h3 {
 #portfolio {
     list-style-type: none;
     padding-left: 0;
+}
+
+.video-holder {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  background: rgb(255, 75, 75);
+  border-radius: 40px 0px;
+}
+
+iframe {
+  max-width: 80%;
+  margin-left: 50px;
+  margin-top: 15px;
+  border-radius: 40px 0px;
+}
+
+.video-info {
+  flex-basis: 200px;
 }
 
 #portfolio li {
@@ -137,4 +158,6 @@ h2, h3 {
       align-content: center;
       justify-content: center;
     }
+
+
 }
