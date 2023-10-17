@@ -10,20 +10,156 @@ body {
     margin: auto;
 }
 
+#search {
+  background: rgb(255, 75, 75);
+  margin-left: 33%;
+  padding-left: 20px;
+  margin-right: 35%;
+  border-radius: 40px;
+}
+
+#side {
+  display: flex;
+}
+
+#side-2 {
+  display: flex;
+}
+
 #tmtd {
   background: rgb(255, 75, 75);
   margin-bottom: 100px;
   width: 300px;
   height: 350px;
   border-radius: 40px;
+  margin-left: 25px;
 
 }
 
 .tmtdt {
-  padding-left: 65px;
+  padding-left: 35px;
 }
 
 .tmtdi {
+  border-radius: 40px;
+}
+
+#WebR {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.WebRt {
+  padding-left: 95px;
+}
+
+.WebRi {
+  border-radius: 40px;
+}
+
+#ADOFAI {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 25px;
+}
+
+.ADOFAIt {
+  padding-left: 20px;
+}
+
+.ADOFAIi {
+  border-radius: 40px;
+}
+
+#Rts {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.Rtst {
+  padding-left: 55px;
+}
+
+.Rtsi {
+  border-radius: 40px;
+}
+
+#CL {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.CLt {
+  padding-left: 70px;
+}
+
+.CLi {
+  border-radius: 40px;
+}
+
+#Mario {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.Mot {
+  padding-left: 120px;
+}
+
+.Moi {
+  border-radius: 40px;
+}
+
+#Super-M {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.SMt {
+  padding-left: 85px;
+}
+
+.SMi {
+  border-radius: 40px;
+}
+
+#RB {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.RBt {
+  padding-left: 85px;
+}
+
+.RBi {
   border-radius: 40px;
 }
 

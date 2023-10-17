@@ -1,0 +1,157 @@
+
+body {
+    background: rgb(255, 113, 113);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-family: arial;
+}
+#all-contents {
+    max-width: 800px;
+    margin: auto;
+}
+
+.fullscreen {
+  background: rgb(255, 75, 75);
+  border-radius: 40px;
+  margin-left: 28%;
+  padding-left: 10px;
+  margin-right: 400px;
+}
+
+.Rts {
+  height: 1000px;
+  width: 100%;
+  border-radius: 40px;
+}
+
+/* navigation menu */
+nav {
+    background: rgb(255, 75, 75);
+    border-radius: 40px 0px;
+   margin: 0 auto;
+   margin-bottom: 20px;
+    display: flex;
+    padding: 10px;
+}
+h1 {
+    display: flex;
+    align-items: center;
+    color: white;
+    flex: 1;
+    margin: 0;
+}
+#nav-ul {
+    list-style-image: none;
+}
+.nav-li {
+    display: inline-block;
+    padding: 0 10px;
+}
+a {
+    text-decoration: none;
+    color: #7c4200;
+}
+
+/* main container area beneath menu */
+main {
+    background: rgb(255, 75, 75);
+    border-radius: 40px 0px;;
+    display: flex;
+}
+.sidebar {
+    margin-right: 25px;
+    padding: 20px;
+}
+.sidebar-img {
+    width: 200px;
+    border-radius: 40px;
+}
+.content {
+    flex: 1;
+    padding: 15px;
+}
+
+/* portfolio styles */
+#interests {
+    border: 4px rgb(255, 255, 255) ridge;
+    border-radius: 40px;
+    padding: 8%;
+}
+h2, h3 {
+    margin: 0px;
+}
+
+ /* portfolio styles */
+ .content h1 {
+    color: rgb(255, 255, 255);
+}
+
+#portfolio {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#portfolio li {
+    background: rgb(255, 85, 85);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+    background: rgb(255, 95, 95);
+}
+
+#portfolio a {
+    text-decoration: none;
+    color: #ffffff;
+}
+@media screen and (min-width: 120px) and (max-width: 1080px) {
+    main {
+      height: 100ch;
+      zoom: 1.5;
+      display: grid;
+    }
+
+    h1 {
+      font-size: 44px;
+    }
+
+    h2 {
+      font-size: 42px;
+    }
+
+    h3 {
+      font-size: 36px;
+    }
+
+    #all-contents {
+      height: 100ch;
+      margin: none;
+    }
+
+    a {
+      font-size: 42px;
+    }
+
+    .sidebar {
+      margin-right: 0px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sidebar-img {
+      width: 100%;
+    }
+
+    p,
+    li {
+      font-size: 24px;
+    }
+
+    .content {
+      align-content: center;
+      justify-content: center;
+    }
+
+}

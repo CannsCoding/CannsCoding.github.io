@@ -70,7 +70,6 @@ createPlatform(1350, 660, 80, 20)
   createCollectable("kennedi", 1100, 655, 0)
   createCollectable("kennedi", 1360, 325, 0)
   createCollectable("kennedi", 10, 550, 0)
-  createCollectable("kennedi", -25, -30, 0)
 
     // TODO 3
     // Create cannons
