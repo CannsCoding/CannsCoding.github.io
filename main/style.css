@@ -26,6 +26,10 @@ body {
   display: flex;
 }
 
+#side-3 {
+  display: flex;
+}
+
 #tmtd {
   background: rgb(255, 75, 75);
   margin-bottom: 100px;
@@ -43,6 +47,7 @@ body {
 .tmtdi {
   border-radius: 40px;
 }
+
 
 #WebR {
   background: rgb(255, 75, 75);
