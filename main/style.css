@@ -134,7 +134,7 @@ body {
   border-radius: 40px;
 }
 
-#Super-M {
+#Mine {
   background: rgb(255, 75, 75);
   margin-bottom: 100px;
   width: 300px;
@@ -143,11 +143,11 @@ body {
   margin-left: 50px;
 }
 
-.SMt {
-  padding-left: 85px;
+.Minet {
+  padding-left: 95px;
 }
 
-.SMi {
+.Minei {
   border-radius: 40px;
 }
 

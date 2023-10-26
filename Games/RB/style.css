@@ -10,16 +10,8 @@ body {
     margin: auto;
 }
 
-.fullscreen {
-  background: rgb(255, 75, 75);
-  border-radius: 40px;
-  margin-left: 28%;
-  padding-left: 10px;
-  margin-right: 400px;
-}
-
 .RB {
-  height: 1000px;
+  height: 600px;
   width: 100%;
   border-radius: 40px;
 }
