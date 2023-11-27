@@ -18,6 +18,10 @@ body {
   border-radius: 40px;
 }
 
+.Grow:hover{
+  transform: scale(1.1);
+}
+
 #side {
   display: flex;
 }
@@ -118,6 +122,92 @@ body {
   border-radius: 40px;
 }
 
+#Jpjr {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 25px;
+
+}
+
+.Jpjrt {
+  padding-left: 60px;
+}
+
+.Jpjri {
+  border-radius: 40px;
+}
+
+#Sws {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.Swst {
+  padding-left: 60px;
+}
+
+.Swsi {
+  border-radius: 40px;
+}
+
+#Tetris {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.Tetrist {
+  padding-left: 115px;
+}
+
+.Tetrisi {
+  border-radius: 40px;
+}
+
+#Veloce {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.Velocet {
+  padding-left: 110px;
+}
+
+.Velocei {
+  border-radius: 40px;
+}
+
+#BitL {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.BitLt {
+  padding-left: 110px;
+}
+
+.BitLi {
+  border-radius: 40px;
+}
+
 #Mine {
   background: rgb(255, 75, 75);
   margin-bottom: 100px;
@@ -135,6 +225,22 @@ body {
   border-radius: 40px;
 }
 
+#AtC {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.AtCt {
+  padding-left: 45px;
+}
+
+.AtCi {
+  border-radius: 40px;
+}
 
 /* navigation menu */
 nav {
