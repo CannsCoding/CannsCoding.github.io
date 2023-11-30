@@ -3,7 +3,7 @@
     <head>
         <title>Cann's site</title>
         <link rel="stylesheet" href="style.css">
-        <script src="no-arrow.js"></script>
+        <script src="/main/user&pass.js"></script>
     </head>
 
     <body>
@@ -27,9 +27,24 @@
         <main>
             <h1></h1>
         </main>
-
-        <section >
-            <iframe class="RB" src="https://oddgames-0192837465.netlify.app/play/retrobowl/" height="50%"></iframe>
+        <section>
+            <iframe class="RB" id="video" src="https://oddgames-0192837465.netlify.app/play/retrobowl/" height="50%"></iframe>
         </section>
+        <section>
+            <button class="Button" onclick="openFullscreen();"><img height="30%" width="30%" src="https://cdn-icons-png.flaticon.com/128/483/483333.png"></button>
+        </section>
+        <script>
+            var elem = document.getElementById("video");
+    
+            function openFullscreen() {
+                if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+                } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+                }
+            }
+            </script>
     </body>
 </html>

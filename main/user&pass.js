@@ -1,14 +1,10 @@
-    var username = prompt("What is your username")
-    
-        var password = prompt("What is yor password")
+var username = prompt("What is your Username")
+var Password = prompt("What is your Password")
 
-            if(username === "Cann" && password === "Geek"){
-                alert("Welcome Randy")
-            }
-            else if(username === "Dumb" && password === "Idiot"){
-                alert("Hello Austin")
-            }
-            else {
-                alert("Go away!!")
-                window.location.href = "https://cannscoding.github.io/main/index.html"
-            }
+if (username === "Cann" && Password === "Geek") {
+    alert("Proceed to game")
+}
+else {
+    alert("try again")
+    window.location = "https://cannscoding.github.io/main/Games.html"
+}

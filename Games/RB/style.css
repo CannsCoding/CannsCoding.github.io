@@ -10,6 +10,18 @@ body {
     margin: auto;
 }
 
+.Button {
+  margin-left: 90%;
+  border: 2px solid rgb(255, 75, 75);
+  border-radius: 40px;
+  background: rgb(255, 75, 75);
+}
+
+.Button:hover {
+  border-radius: 10px;
+  border-color: black;
+}
+
 .RB {
   height: 600px;
   width: 100%;
