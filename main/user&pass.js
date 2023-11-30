@@ -8,3 +8,24 @@ else {
     alert("try again")
     window.location = "https://cannscoding.github.io/main/Games.html"
 }
+if (username === "Dumb" && Password === "Idiot") {
+    alert("Proceed to game")
+}
+else {
+    alert("try again")
+    window.location = "https://cannscoding.github.io/main/Games.html"
+}
+if (username === "Ty" && Password === "Guy") {
+    alert("Proceed to game")
+}
+else {
+    alert("try again")
+    window.location = "https://cannscoding.github.io/main/Games.html"
+}
+if (username === "Limes" && Password === "Lemons") {
+    alert("Proceed to game")
+}
+else {
+    alert("try again")
+    window.location = "https://cannscoding.github.io/main/Games.html"
+}
