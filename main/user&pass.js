@@ -16,7 +16,7 @@ else if (username === "Limes" && Password === "Lemons") {
 else if (username === "CComfront" && Password === "10234677") {
     alert("Proceed to game")
 }
-else if (username === "CComfront" && Password === "10234677") {
+else if (username === "Swimmer" && Password === "Boy") {
     alert("Proceed to game")
 }
 
