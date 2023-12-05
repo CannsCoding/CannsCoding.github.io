@@ -19,8 +19,11 @@ else if (username === "CComfront" && Password === "10234677") {
 else if (username === "Swimmer" && Password === "Boy") {
     alert("Proceed to game")
 }
+else if (username === "The" && Password === "Kid") {
+    alert("Proceed to game")
+}
 
 else {
     alert("try again")
-    window.location = "https://cannscoding.github.io/main/Games.html"
+    window.location = "https://cannscoding.github.io"
 }
