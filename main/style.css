@@ -22,6 +22,14 @@ body {
   transform: scale(1.1);
 }
 
+#chatBox {
+  background: rgb(255, 75, 75);
+  height: 600px;
+  padding: 3%;
+  border: rgb(255, 75, 75);;
+  border-radius: 40px;
+}
+
 #side {
   display: flex;
 }
@@ -281,7 +289,7 @@ body {
   border-radius: 40px;
 }
 
-#CubeF {
+#PaperI {
   background: rgb(255, 75, 75);
   margin-bottom: 100px;
   width: 300px;
@@ -290,11 +298,11 @@ body {
   margin-left: 50px;
 }
 
-.CubeFt {
+.PaperIt {
   padding-left: 85px;
 }
 
-.CubeFi {
+.PaperIi {
   border-radius: 40px;
 }
 
@@ -399,7 +407,17 @@ h2, h3 {
   border-radius: 40px 0px;
 }
 
-iframe {
+#update-channel {
+  background: rgb(255, 75, 75);
+  border: 2px solid rgb(255, 75, 75);
+  border-radius: 40px 0px;
+}
+
+#update {
+  padding-bottom: 10px;
+}
+
+.video {
   max-width: 80%;
   margin-left: 50px;
   margin-top: 15px;
