@@ -22,6 +22,9 @@ else if (username === "Swimmer" && Password === "Boy") {
 else if (username === "The" && Password === "Kid") {
     alert("Proceed to game")
 }
+else if (username === "Brayden" && Password === "Sarge2021!!"){
+    alert("Proceed to game")
+}
 
 else {
     alert("try again")
