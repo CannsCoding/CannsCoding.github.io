@@ -7,7 +7,7 @@ function Clicked() {
     
     if (User === "Cann" && Pass === "Geek") {
         alert("Proceed to site")
-        window.location.href = "/everything-folder/Games.html";
+        window.open("https://cannscoding.github.io/main/Games.html")
     }
     else if (User === "Dumb" && Pass === "Idiot") {
         alert("Proceed to site")
