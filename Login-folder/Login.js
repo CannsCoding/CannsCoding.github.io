@@ -7,7 +7,7 @@ function Clicked() {
     
     if (User === "Cann" && Pass === "Geek") {
         alert("Proceed to site")
-        window.open("https://cannscoding.github.io/main/Games.html")
+        window.open("https://canns-info-site.netlify.app/everything-folder/GamesfVygKXGshcaTPvpwHbMj.html")
     }
     else if (User === "Dumb" && Pass === "Idiot") {
         alert("Proceed to site")
