@@ -64,6 +64,23 @@ body {
   border-radius: 40px;
 }
 
+#CoreB {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+
+  
+}
+
+.CoreBt {
+  padding-left: 90px;
+}
+
+.CoreBi {
+  border-radius: 40px;
+}
 
 #WebR {
   background: rgb(255, 75, 75);
