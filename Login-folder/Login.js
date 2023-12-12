@@ -37,6 +37,10 @@ function Clicked() {
         alert("Proceed to site")
         window.open("https://canns-info-site.netlify.app/everything-folder/GamesfVygKXGshcaTPvpwHbMj.html")
     }
+    else if (User === "Sarth" && Pass === "BigMan24"){
+        alert("Proceed to site")
+        window.open("https://canns-info-site.netlify.app/everything-folder/GamesfVygKXGshcaTPvpwHbMj.html")
+    }
     else {
     alert("try again")
     }
