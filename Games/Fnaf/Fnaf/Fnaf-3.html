@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Cann's site</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/Games/Fnaf/style.css">
         <script src="/main/user&pass.js"></script>
     </head>
 
@@ -16,7 +16,7 @@
                         <a id="hover" class="nav-text" href="/main/portfolio.html"> Portfolio </a>
                     </li>
                     <li class="nav-li">
-                        <a  id="hover" class="nav-text" href="/main/index.html">Home</a>
+                        <a id="hover" class="nav-text" href="/main/index.html">Home</a>
                     </li>
                     <li class="nav-li">
                         <a id="hover" class="nav-text" href="/everything-folder/GamesfVygKXGshcaTPvpwHbMj.html"> Games</a>
@@ -30,21 +30,21 @@
         <section>
             <button class="Button" onclick="openFullscreen();"><img height="30%" width="30%" src="https://cdn-icons-png.flaticon.com/128/483/483333.png"></button>
         </section>
-        <section >
-            <iframe class="Mine" id="video" src="https://oddgames-0192837465.netlify.app/play/twitch-tetris/" height="50%"></iframe>
+        <section>
+            <iframe class="Fnaf" id="video" src="https://oddgames-0192837465.netlify.app/play/fnaf3/" height="50%"></iframe>
         </section>
         <script>
-            var elem = document.getElementById("video");
-    
-            function openFullscreen() {
-                if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-                } else if (elem.webkitRequestFullscreen) { /* Safari */
-                elem.webkitRequestFullscreen();
-                } else if (elem.msRequestFullscreen) { /* IE11 */
-                elem.msRequestFullscreen();
-                }
+        var elem = document.getElementById("video");
+
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
             }
-            </script>
+        }
+        </script>
     </body>
 </html>

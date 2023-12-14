@@ -46,7 +46,11 @@ body {
   display: flex;
 }
 
-#side-5    {
+#side-5 {
+  display: flex;
+}
+
+#side-6 {
   display: flex;
 }
 
@@ -81,6 +85,73 @@ body {
 }
 
 .CoreBi {
+  border-radius: 40px;
+}
+
+#Fnaf-1 {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+}
+
+.Fnaf-1t {
+  padding-left: 120px;
+}
+
+.Fnaf-1i {
+  border-radius: 40px;
+}
+
+#Fnaf-2 {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.Fnaf-2t {
+  padding-left: 110px;
+}
+
+.Fnaf-2i {
+  border-radius: 40px;
+}
+
+#Fnaf-3 {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.Fnaf-3t {
+  padding-left: 110px;
+}
+
+.Fnaf-3i {
+  border-radius: 40px;
+}
+
+#Fnaf-4 {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.Fnaf-4t {
+  padding-left: 110px;
+}
+
+.Fnaf-4i {
   border-radius: 40px;
 }
 
