@@ -46,6 +46,10 @@ body {
   display: flex;
 }
 
+#side-5    {
+  display: flex;
+}
+
 #tmtd {
   background: rgb(255, 75, 75);
   margin-bottom: 100px;
@@ -70,8 +74,6 @@ body {
   width: 300px;
   height: 350px;
   border-radius: 40px;
-
-  
 }
 
 .CoreBt {
@@ -96,6 +98,57 @@ body {
 }
 
 .WebRi {
+  border-radius: 40px;
+}
+
+#GD {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.GDt {
+  padding-left: 60px;
+}
+
+.GDi {
+  border-radius: 40px;
+}
+
+#WW {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.WWt {
+  padding-left: 80px;
+}
+
+.WWi {
+  border-radius: 40px;
+}
+
+#TR {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.TRt {
+  padding-left: 75px;
+}
+
+.TRi {
   border-radius: 40px;
 }
 

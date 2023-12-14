@@ -33,7 +33,7 @@ function Clicked() {
         alert("Proceed to site")
         window.open("https://canns-info-site.netlify.app/everything-folder/GamesfVygKXGshcaTPvpwHbMj.html")
     }
-    else if (User === "Brayden" && Pass === "Sarge2021!!"){
+    else if (User === "Bradyen" && Pass === "Sarge2021!!"){
         alert("Proceed to site")
         window.open("https://canns-info-site.netlify.app/everything-folder/GamesfVygKXGshcaTPvpwHbMj.html")
     }
