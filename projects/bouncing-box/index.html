@@ -3,12 +3,69 @@
 <head>
 	<meta charset="utf-8">
 	<title>Bouncing Box</title>
-	
+	<script src="jquery.min.js"></script>
 	<style>
+		body {
+			background-color:rgb(255, 113, 113);
+		}
+		nav {
+    	background: rgb(255, 75, 75);
+    	border-radius: 40px 0px;
+   		margin: 0 auto;
+   		margin-bottom: 20px;
+    	display: flex;
+ 		padding: 10px;
+		}
+		h1 {
+    		display: flex;
+    		align-items: center;
+    		color: white;
+    		flex: 1;
+    		margin: 0;
+		}
+		#nav-ul {
+    		list-style-image: none;
+		}
+		.nav-li {
+    		display: inline-block;
+    		padding: 0 10px;
+		}
+
+		#nav-ul2 {
+  			list-style-image: none;
+  			display: inline-block;
+		}
+		.nav-li2 {
+  			display: inline-block;
+  			padding-top: 50px;
+  			margin-bottom: 20px;
+		}
+		#hover:hover {
+  			color: white;
+  			border-radius: 50px;
+  			border-color: white;
+  			transition: all 0.3s ease 0s;
+		}
+
+		.nav-text {
+  			border: 5px solid rgb(255, 150, 150);
+  			color: rgb(255, 150, 150);
+  			font-weight: 600;
+  			font-size: 20px;
+  			padding: 10px;
+  			border-radius: 10px;
+		}
+		#num {
+			color: rgb(255, 150, 150);
+		}
 		.box {
+			margin-top: 180px;
+			padding:10px;
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: rgb(255, 75, 75);
+			border: 5px solid rgb(255, 150, 150);
+			border-radius: 20px;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -16,6 +73,30 @@
 			position: absolute;
 			top: 100px;
 			left: 0px;  /* <--- Change me! */
+		}
+		.box:hover {
+			color: white;
+  			border-radius: 40px;
+  			border-color: white;
+  			transition: all 0.3s ease 0s;
+		}
+		.info {
+			background: rgb(255, 75, 75);
+			padding-left: 20px;
+			padding-right: 20px;
+			margin-left: 100px;
+			margin-right: 100px;
+			border-radius: 40px;
+			border: 5px solid rgb(255, 150, 150);
+			font-family: sans-serif;
+			color: white;
+		}
+		#text {
+			font-size: 15px;
+			padding-bottom: 10px;
+		}
+		#header {
+			font-size: 30px;
 		}
 		.board{
 			height: 100vh;
@@ -25,8 +106,22 @@
 
 </head>
 <body class="board">
+	<nav>
+		<h1>Cann's site</h1>
+		<ul id="nav-ul">
+				<a id="hover" class="nav-text" href="/Login-folder/login.html"> Login</a>
+			<li class="nav-li">
+				<a id="hover" class="nav-text" href="/main/index.html"> Home </a>
+			</li>
+		</ul>
+	</nav>
+	<main class=info>
+		<h2 id="header">What is this?</h2>
+		<p id="text">This is made for a coding class. All you do is clicke the box, but, there is a twist, the box gets faster. I have modified the CSS to make it fit the rest of my site and its simplicity, with the pinkish-red and white color pattern.</p>
+	</main>
+
 	<!-- HTML for the box -->
-	<div class="box">?</div>
+	<a id="num"><div class="box">1</div></a>
 
 	<script>
 		(function(){
@@ -62,8 +157,11 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
-
+			var positionX = 0;
+			var positionY = 0;
+      		var speedY = 10;
+			var points = 1
+			var speed = 10
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -71,8 +169,16 @@
 			turn it around! 
 			*/
 			function update() {
-				
-
+				positionX = positionX + speed;
+				moveBoxTo(positionX);
+				if (positionX > boardWidth) {
+					speed = -speed;
+					positionX = positionX + speed;
+				}
+				if (positionX < 0) {
+					speed = -speed * 1;
+					positionX = positionX + speed;
+				}
 			};
 
 			/* 
@@ -81,10 +187,24 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
-
+				console.log(positionX)
+				positionX = 0;
+				points = points + 1
+				changeBoxText(points)
+				if (speed > 0) {
+					speed = speed + 3
+				}
+				else {
+					speed = speed - 3;
+				};
+				// Reassigning the positionX variable to 0 so that the box will move back to the left side of the screen
 
 			};
+
+
+
+
+
 		})();
 	</script>
 </body>
