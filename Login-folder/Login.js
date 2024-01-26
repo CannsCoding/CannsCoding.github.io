@@ -41,6 +41,10 @@ function Clicked() {
         alert("Proceed to site")
         window.open("https://canns-info-site.netlify.app/everything-folder/GamesfVygKXGshcaTPvpwHbMj.html")
     }
+    else if (User === "DOGEATER" && Pass === "ASIANDOGEATER"){
+        alert("Proceed to site")
+        window.open("https://canns-info-site.netlify.app/everything-folder/GamesfVygKXGshcaTPvpwHbMj.html")
+    }
     else {
     alert("try again")
     }

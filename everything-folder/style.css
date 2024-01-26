@@ -54,6 +54,10 @@ body {
   display: flex;
 }
 
+#side-7 {
+  display: flex;
+}
+
 #tmtd {
   background: rgb(255, 75, 75);
   margin-bottom: 100px;
@@ -69,6 +73,24 @@ body {
 }
 
 .tmtdi {
+  border-radius: 40px;
+}
+
+#DND {
+  background: rgb(255, 75, 75);
+  margin-bottom: 100px;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+
+  
+}
+
+.DNDt {
+  padding-left: 120px;
+}
+
+.DNDi {
   border-radius: 40px;
 }
 
