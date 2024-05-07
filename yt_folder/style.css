@@ -71,19 +71,25 @@ h1 {
 }
 
 #allVids {
+  margin-top: 10px;
   background: rgb(255, 85, 85);
   padding: 20px;
   border-radius: 40px;
 }
 
-#row-1 {
+#row-main {
     display: flex;
 }
 
+#row-sub {
+  padding-top: 10px;
+  display: flex;
+}
+
 .video {
-  padding-left: 20px;
+  padding-left: 15px;
   padding-top: 20px;
-  padding-right: 20px;
+  padding-right: 15px;
   border-radius: 40px;
 }
 
