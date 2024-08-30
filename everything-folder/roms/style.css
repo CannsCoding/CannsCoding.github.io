@@ -50,30 +50,57 @@ body {
 
 /* navigation menu */
 nav {
-    background: rgb(255, 75, 75);
-    border-radius: 40px 0px;
-   margin: 0 auto;
-   margin-bottom: 20px;
-    display: flex;
-    padding: 10px;
+  background: rgb(255, 75, 75);
+  border-radius: 40px 0px;
+ margin: 0 auto;
+ margin-bottom: 20px;
+  display: flex;
+  padding: 10px;
 }
 h1 {
-    display: flex;
-    align-items: center;
-    color: white;
-    flex: 1;
-    margin: 0;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex: 1;
+  margin: 0;
 }
 #nav-ul {
-    list-style-image: none;
+  list-style-image: none;
 }
 .nav-li {
-    display: inline-block;
-    padding: 0 10px;
+  display: inline-block;
+  padding: 0 10px;
 }
+
+#nav-ul2 {
+list-style-image: none;
+display: inline-block;
+}
+.nav-li2 {
+display: inline-block;
+padding-top: 50px;
+margin-bottom: 20px;
+}
+
+#hover:hover {
+color: white;
+border-radius: 50px;
+border-color: white;
+transition: all 0.3s ease 0s;
+}
+
+.nav-text {
+border: 5px solid rgb(255, 150, 150);
+color: rgb(255, 150, 150);
+font-weight: 600;
+font-size: 20px;
+padding: 10px;
+border-radius: 10px;
+}
+
 a {
-    text-decoration: none;
-    color: #7c4200;
+  text-decoration: none;
+  color: #7c4200;
 }
 
 /* main container area beneath menu */

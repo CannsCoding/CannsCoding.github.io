@@ -58,6 +58,23 @@ body {
   text-align: center;
 }
 
+#Mine {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.Minei {
+  border-radius: 40px;
+}
+
+.Minet {
+  font-size: 20px;
+  padding-top: 10px;
+  text-align: center;
+}
+
 #TMTD {
   border-radius: 40px;
   background-color: rgb(255, 75, 75);
