@@ -87,6 +87,8 @@ h1 {
 .row-sub {
   padding-top: 10px;
   display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .video {
