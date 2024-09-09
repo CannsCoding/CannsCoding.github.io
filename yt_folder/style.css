@@ -70,11 +70,17 @@ h1 {
   border-radius: 40px;
 }
 
+#center {
+  display: flex;
+}
+
 #allVids {
-  margin-top: 10px;
+  position: fixed;
+  padding-right: 20px;
   background: rgb(255, 85, 85);
   padding: 20px;
   border-radius: 40px;
+  margin-top: 40px;
 }
 
 #row-main {
@@ -91,12 +97,14 @@ h1 {
   padding-top: 20px;
   padding-right: 15px;
   border-radius: 40px;
+  margin: auto;
 }
 
 .vid {
   background: rgb(255, 113, 113);
   margin-right: 10px;
   border-radius: 40px;
+  
 }
 
 .text {
