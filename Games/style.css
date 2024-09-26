@@ -24,6 +24,36 @@ body {
 
 #side-1 {
   display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#side-2 {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#side-3 {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#side-4 {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#side-5 {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 #CC {
@@ -38,6 +68,70 @@ body {
 }
 
 .CCt {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#CM {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.CMi {
+  border-radius: 40px;
+}
+
+.CMt {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#CR {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.CRi {
+  border-radius: 40px;
+}
+
+.CRt {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#CSG {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.CSGi {
+  border-radius: 40px;
+}
+
+.CSGt {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#ENF {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.ENFi {
+  border-radius: 40px;
+}
+
+.ENFt {
   padding-top: 10px;
   text-align: center;
 }
@@ -87,6 +181,165 @@ body {
 }
 
 .TMTDt {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#EV {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.EVi {
+  border-radius: 40px;
+}
+
+.EVt {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#F2 {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.F2i {
+  border-radius: 40px;
+}
+
+.F2t {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#FN {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.FNi {
+  border-radius: 40px;
+}
+
+.FNt {
+  padding-top: 10px;
+  text-align: center;
+}
+#M {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.Mi {
+  border-radius: 40px;
+}
+
+.Mt {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#PIO {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.PIOi {
+  border-radius: 40px;
+}
+
+.PIOt {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#S {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.Si {
+  border-radius: 40px;
+}
+
+.St {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#SS {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.SSi {
+  border-radius: 40px;
+}
+
+.SSt {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#SH {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.SHi {
+  border-radius: 40px;
+}
+
+.SHt {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#WW {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.WWi {
+  border-radius: 40px;
+}
+
+.WWt {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#PH {
+  border-radius: 40px;
+  background-color: rgb(255, 75, 75);
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.PHi {
+  border-radius: 40px;
+}
+
+.PHt {
   padding-top: 10px;
   text-align: center;
 }
