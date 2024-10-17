@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cann's site</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #die {
+                height: 200px;
+                width: 200px;
+                border-radius: 40px;
+                display: flex;
+                margin: auto;
+                background-color: rgb(236, 156, 156); /* feel free to change this */
+                position: relative;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    </head>
+
+    <body>
+        <div id="all-contents">
+            <nav>
+                <h1>Cann's site</h1>
+                <ul id="nav-ul">
+                    <li class="nav-li">
+                        <a id="hover" class="nav-text" href="/Login-folder/login.html"> Login</a>
+                    </li>
+                    <li class="nav-li">
+                        <a id="hover" class="nav-text" href="/main/portfolio.html"> Portfolio </a>
+                    </li>
+                    <li class="nav-li">
+                        <a id="hover" class="nav-text" href="/yt_folder/yt_index.html"> CannGeek yt </a>
+                    </li>
+                </ul>
+            </nav>
+
+        <section id='die'></section>
+
+        <script>
+            function makeDot(x, y) {
+                $('<section>')
+                .css("height", 30)
+                .css("width", 30)
+                .css("background-color", "rgb(255, 113, 113)")
+                .css("border-radius", 40)
+                .css("position", "absolute")
+                .css('top', y - 16)
+                .css('left', x - 16)
+                .appendTo("#die");
+            }
+            $("body").on("click", rollDie);
+
+            function rollDie(die) {
+                $('#die').empty();
+                var randomNum = Math.ceil(Math.random() * 6)
+                var randomBack = Math.ceil(Math.random() * 6)
+                if (randomNum === 1) {
+                    makeDot(100, 100, die); // middle middle
+                }
+                else if (randomNum === 2) {
+                    makeDot(50, 50, die); // top left
+                    makeDot(150, 150, die); // bottom right
+                }
+                else if (randomNum === 3) {
+                    makeDot(50, 50, die); // top left
+                    makeDot(150, 150, die); // bottom right
+                    makeDot(100, 100, die); // middle middle
+                }
+                else if (randomNum === 4) {
+                    makeDot(150, 150, die); // bottom right
+                    makeDot(50, 50, die); // top left
+                    makeDot(50, 150, die); // bottom left
+                    makeDot(150, 50, die); // top right
+                }
+                else if (randomNum === 5) {
+                    makeDot(100, 100, die); // middle middle
+                    makeDot(150, 150, die); // bottom right
+                    makeDot(50, 50, die); // top left
+                    makeDot(50, 150, die); // bottom left
+                    makeDot(150, 50, die); // top right
+                }
+                else if (randomNum === 6) {
+                    makeDot(150, 150, die); // bottom right
+                    makeDot(50, 50, die); // top left
+                    makeDot(50, 150, die); // bottom left
+                    makeDot(150, 50, die); // top right
+                    makeDot(50, 100, die); // middle left
+                    makeDot(150, 100, die); // middle right
+                }
+            }
+            
+        </script>
+    </body>
