@@ -2,6 +2,15 @@
 
 $(document).ready(runProgram); // wait for the HTML / CSS elements of the page to fully load, then execute runProgram()
 
+var runner = {
+  height: $("#walker").height(20),
+  width: $("#walker").width(20)
+}
+var taged = {
+  height: $("#walkerP2").height(50),
+  width: $("#walkerP2").width(50)
+}
+
 /* keybinds */
 var arrowKey = {
     "up":38,
@@ -56,19 +65,19 @@ function runProgram(){
   function handleKeyDown(event) {
     if (event.which === arrowKey.up) {
       console.log("key pressed (up): " + arrowKey.up)      
-      walker.speedY = -5;
+      walker.speedY = -3;
     }
     if (event.which === arrowKey.down) {
       console.log("key pressed (down): " + arrowKey.down)      
-      walker.speedY = 5;
+      walker.speedY = 3;
     }
     if (event.which === arrowKey.left) {
       console.log("key pressed (left): " + arrowKey.left)      
-      walker.speedX = -5;
+      walker.speedX = -3;
     }
     if (event.which === arrowKey.right) {
       console.log("key pressed (right): " + arrowKey.right)      
-      walker.speedX = 5;
+      walker.speedX = 3;
     }
     if (event.which === textKey.up) {
       console.log("key pressed (up): " + textKey.up)      
@@ -146,8 +155,33 @@ function runProgram(){
   ////////////////////////////////////////////////////////////////////////////////
 
   function playerCollision() {
+    if (walker.positionX < walkerP2.positionX + $("#walkerP2").width() &&
+        walker.positionX + $("#walker").width() > walkerP2.positionX &&
+        walker.positionY < walkerP2.positionY + $("#walkerP2").height() &&
+        walker.positionY + $("#walker").height() > walkerP2.positionY) {
+        
+        console.log("Collision detected!");
 
-  }
+        // Swap positions
+        walker.positionX = 0;
+        walker.positionY = 0;
+        walkerP2.positionX = $("#board").width() - $("#walkerP2").width();
+        walkerP2.positionY = $("#board").height() - $("#walkerP2").height();
+
+        
+        // Swap attributes
+        swapRolls();
+    }
+}
+
+
+  function swapRolls() {
+    // doesn't really swap rolls just swaps controls
+    var controlTemp = arrowKey
+    arrowKey = textKey
+    textKey = controlTemp
+}
+
 
   function wallCollision() {
     if(walker.positionX < 0) {
@@ -156,11 +190,11 @@ function runProgram(){
     if(walker.positionY < 0) {
       walker.positionY = 0;
     }
-    if(walker.positionX > $("#board").width() - 50) {
-      walker.positionX = $("#board").width()- 50;
+    if(walker.positionX > $("#board").width() - 70) {
+      walker.positionX = $("#board").width()- 70;
     }
-    if(walker.positionY > $("#board").height() - 50) {
-      walker.positionY = $("#board").height() - 50;
+    if(walker.positionY > $("#board").height() - 70) {
+      walker.positionY = $("#board").height() - 70;
     }
     if(walkerP2.positionX < 0) {
       walkerP2.positionX = 0;
