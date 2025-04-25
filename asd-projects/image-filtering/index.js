@@ -54,31 +54,30 @@ function applyFilter(filterFunction) {
   }
 }
 
-
 // TODO 7: Create the applyFilterNoBackground function
 function applyFilterNoBackground(filterFunction) {
-  // Get the background color
-  var backgroundRgb = rgbStringToArray(image[0][0]);
-
+  // Get the background color (top left pixel)
+  var backgroundColorString = image[0][0];
+  
   for (var row = 0; row < image.length; row++) {
     for (var col = 0; col < image[row].length; col++) {
       // Access the current pixel
       var rgbString = image[row][col];
 
-      // Convert the string to an array of numbers
-      var rgbNumbers = rgbStringToArray(rgbString);
-
       // Check if the current pixel is not the background color
-      if (rgbString !== backgroundRgb) {
+      if (rgbString !== backgroundColorString) {
+        // Convert the string to an array of numbers
+        var rgbNumbers = rgbStringToArray(rgbString);
+        
         // Apply the filter
         filterFunction(rgbNumbers);
+        
+        // Convert the array back to a string
+        rgbString = rgbArrayToString(rgbNumbers);
+        
+        // Update the image with the modified pixel
+        image[row][col] = rgbString;
       }
-
-      // Convert the array back to a string
-      rgbString = rgbArrayToString(rgbNumbers);
-
-      // Update the image with the modified pixel
-      image[row][col] = rgbString;
     }
   }
 }
@@ -86,6 +85,9 @@ function applyFilterNoBackground(filterFunction) {
 // TODO 5: Create the keepInBounds function
 function keepInBounds(value) {
   return value < 0 ? 0 : value > 255 ? 255 : value;
+  
+  // Alternative implementation using Math.max and Math.min:
+  // return Math.min(255, Math.max(0, value));
 }
 
 // TODO 3: Create reddify function
