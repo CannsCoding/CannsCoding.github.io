@@ -95,14 +95,32 @@
     }
 
     // TODO 1: bounce the ball off the top
-
+    if (ball.y + ball.radius <= 0) {
+      ball.y = ball.radius;
+      ball.yVelocity *= -1;
+      createjs.Sound.play("wall");
+    }
 
     // TODO 2: bounce the ball off the bottom
-
+    if (ball.y + ball.radius >= canvas.height) {
+      ball.y = canvas.height - ball.radius; // keep inside screen
+      ball.yVelocity *= -1;
+      createjs.Sound.play("wall");
+    }
 
     // TODO 3: bounce the ball off each of the paddles
-
-
+    // CPU paddle
+    if (ball.x + ball.radius >= paddleCPU.x && ball.y >= paddleCPU.y && ball.y <= paddleCPU.y + heightCPU) {
+      ball.x = paddleCPU.x - ball.radius; //no cliping (not noclip)
+      ball.xVelocity *= -1;
+      createjs.Sound.play("hit");
+    }
+    //player paddle
+    if (ball.x - ball.radius <= paddlePlayer.x + widthPlayer && ball.y >= paddlePlayer.y && ball.y <= paddlePlayer.y + heightPlayer) {
+      ball.x = paddlePlayer.x + widthPlayer + ball.radius; //no cliping (not noclip)
+      ball.xVelocity *= -1;
+      createjs.Sound.play("hit");
+    }
   }
 
   // helper function that wraps the draw.rect function for easy paddle making
@@ -118,4 +136,25 @@
     paddle.y = y;
     return paddle;
   }
+
+  //out of bounds
+  // Out of bounds for right side (Player scores)
+  if (ball.x - ball.radius > canvas.width) {
+    resetBall(-5);
+  }
+
+  // Out of bounds for left side (CPU scores)
+  if (ball.x + ball.radius < 0) {
+    resetBall(5);
+  }
+
+  // helper func to reset ball
+  function resetBall(direction) {
+    ball.x = canvas.width / 2;
+    ball.y = canvas.height / 2;
+    ball.xVelocity = direction; 
+    ball.yVelocity = 5;
+  }
+
+
 })(window, window.createjs, window.opspark, window._);
