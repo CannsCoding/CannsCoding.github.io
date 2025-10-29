@@ -1,8 +1,9 @@
 // TODO 4: Add a parameter for your gaming library in the index.js module:
-(function(window, createjs, opspark) {
+(function(window, createjs, opspark, gameLibTemp) {
   // OUR MODULE CODE GOES BELOW HERE //
 
   console.log('index.js initialized!');
+  console.log(gameLibTemp.numz.calculateDistance);
   
   /*
    * In this project, we'll use our getDistance() method to 
@@ -20,7 +21,7 @@
   const engine = opspark.V6().activateResize();
   const canvas = engine.getCanvas();
   const stage = engine.getStage();
-
+  const calculateDistance = gameLibTemp.numz.calculateDistance;
   
   // TODO 4.5: import your getDistance function here
 
@@ -59,8 +60,9 @@
      * TODO 5: use getDistance to calculate the distance between shapeUp and 
      * the mouse. Store the result in a variable called distance:
      */
-    
-    
+    const mousePosition = { x: stage.mouseX, y: stage.mouseY}
+    const distance = calculateDistance(shapeUp, mousePosition);
+    console.log(distance);
     
     /*
      * TODO 6: Check if the mouse is within the area of shapeUp, and set the 
@@ -94,4 +96,4 @@
   // OUR MODULE CODE GOES ABOVE HERE //
   
 // TODO 3: Pass your gaming library into the index.js module:
-}(window, window.createjs, window.opspark));
+}(window, window.createjs, window.opspark, window.gamelibTemp));
