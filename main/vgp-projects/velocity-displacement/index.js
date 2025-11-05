@@ -22,18 +22,11 @@
    * acting against it on both axis, x and y.
    */
   ship.update = function() {
-    /*
-     * TODO 7: Use your game lib's phyz.updateVelocity() 
-     * method to update the ship's velocity. The 
-     * updateVelocity() method takes three arguments,
-     * the body being updated, the force acting 
-     * against the body on its x axis, and the force acting against the body on its y axis.
-     *
-     * TIPS:
-     * 1. The body is obviously the ship, and the ship 
-     * is available to you in this scope as, "this".
-     * 2. What are the x and y forces acting on our ship?
-     */
+    // TODO 7: Update velocity using your game lib
+    gamelibTemp.phyz.updateVelocity(this, this.propulsion, this.propulsion);
+
+    // check for rebound
+    reboundCircularAssetInArea(this, canvas);
     
     
     
@@ -76,39 +69,43 @@
   // listen for user releasing keys //
   document.onkeyup = function(event) {
     // TODO 13: How do we stop the application of forces?
-    
+    ship.propulsion = 0;
+    ship.rotationalVelocity = 0;
   };
   
   function reboundCircularAssetInArea(body, area) {
-    const
-      radius = body.radius,
-      top = 0,
-      left = 0,
-      right = area.width,
-      bottom = area.height;
+  const
+    radius = body.radius,
+    top = 0,
+    left = 0,
+    right = area.width,
+    bottom = area.height;
 
-    // check for hit on either side of area //
-    if (body.x + radius > right) {
-      // we've struck the right side of the area //
-      body.x = right - radius;
-      body.velocityX *= -1;
-    } else if ( /* TODO 9: Check if body's hit left side */ false ) {
-      // we've struck the left side of the area //
-      // TODO 10: Code the reaction to hitting the left side
-      
-    }
-
-    // check for hit on top or bottom //
-    if (body.y - radius < top) {
-      // we've struck the right side of the area //
-      body.y = top + radius;
-      body.velocityY *= -1;
-    } else if ( /* TODO 11: Check if body's hit bottom */ false ) {
-      // we've struck the bottom of the area //
-      // TODO 12: Code the reaction to hitting the bottom
-      
-    }
+  // check for hit on either side of area //
+  if (body.x + radius > right) {
+    // we've struck the right side of the area //
+    body.x = right - radius;
+    body.velocityX *= -1;
+  } 
+  else if (body.x - radius < left) { // TODO 9
+    // we've struck the left side of the area //
+    body.x = left + radius;          // TODO 10
+    body.velocityX *= -1;
   }
+
+  // check for hit on top or bottom //
+  if (body.y - radius < top) {
+    // we've struck the top of the area //
+    body.y = top + radius;
+    body.velocityY *= -1;
+  } 
+  else if (body.y + radius > bottom) { // TODO 11
+    // we've struck the bottom of the area //
+    body.y = bottom - radius;          // TODO 12
+    body.velocityY *= -1;
+  }
+}
+
   
   // TODO 3: replace *my-game-lib* with the name of your game lib //
 }(window, window.opspark, window.gamelibTemp));

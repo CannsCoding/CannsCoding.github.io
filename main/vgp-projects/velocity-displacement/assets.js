@@ -1,14 +1,14 @@
 // TODO 5.b: Replace *my-game-lib* with the name of your game lib
-(function(window, draw, *my-game-lib*) {
+(function(window, draw, gamelibTemp) {
   
   function centerOnStage(asset, canvas) {
-    if(asset.type === 'circular' || asset.radius) {
+    if (asset.type === 'circular' || asset.radius) {
       asset.x = canvas.width / 2;
       asset.y = canvas.height / 2;
     } else {
       const bounds = asset.getBounds();
       asset.x = (canvas.width - bounds.width) / 2;
-      asset.y = (canvas.height - bounds.width) / 2;
+      asset.y = (canvas.height - bounds.height) / 2;
     }
   }
 
@@ -35,9 +35,8 @@
       ship.snapToPixel = true;
       ship.cache(-radius - 10, -radius - 10, radius * 2 + 15, radius * 2 + 15);
       
-      // TODO 6: Merge the ship with your game libs makeBody()
-      
-      
+      // TODO 6: Merge the ship with your game lib’s makeBody()
+      Object.assign(ship, gamelibTemp.phyz.makeBody('ship'));
       
       // give the ship a default propulsion //
       ship.propulsion = 0;
@@ -46,5 +45,6 @@
     },
     centerOnStage,
   };
-// TODO 5.a: Replace *my-game-lib* with the name of your game lib
-}(window, window.opspark.draw, window.*my-game-lib*));
+
+  //  TODO 5.a: Replace *my-game-lib* with the name of your game lib
+}(window, window.opspark.draw, window.gamelibTemp));

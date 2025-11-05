@@ -11,8 +11,17 @@
     playerOne = opspark.shipManager(assets, controls, messenger),
     space = opspark.space(messenger);
 
+    // 🟢 Create Player Two (Extra Credit)
+    const playerTwo = opspark.shipManager(assets, controls, messenger);
+      playerTwo.setKeyMap({
+      UP: controls.KEYS.W,
+      LEFT: controls.KEYS.A,
+      RIGHT: controls.KEYS.D
+    });
+
   orbManager.spawn(15);
   playerOne.spawn();
+  playerTwo.spawn();
   
   controls.activate();
 
