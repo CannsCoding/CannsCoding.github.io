@@ -129,6 +129,44 @@
 
           return ship;
         },
+        
+        makeDashPowerup() {
+          const radius = 20;
+  
+          // Draw a unique look for your powerup (a glowing lightning bolt)
+          const powerup = draw.circle(radius, '#00FFFF'); // base glow circle
+          draw.circle(radius - 5, '#0066FF', null, null, null, null, powerup); // inner layer
+          draw.polyStar(radius / 1.5, 3, 0, 0, '#FFFF00', null, null, null, null, powerup); // lightning bolt shape
+  
+          // Add physics body
+          Object.assign(powerup, phyz.makeBody('powerup', {
+            density: radius / 20 * 0.5,
+            volatility: radius * 0.00005,
+          }));
+
+          // Give it some motion
+          phyz.addRandomVelocity(powerup, canvas);
+
+         // Behavior: keep it bouncing inside canvas like an orb
+          powerup.update = function(event) {
+            phyz.updateVelocity(this, 0, 0);
+            phyz.reboundCircularAssetInArea(this, canvas);
+          };
+
+          // Optional: cache it for better performance
+          powerup.snapToPixel = true;
+          const rad = radius + 2;
+          powerup.cache(-rad, -rad, rad * 2, rad * 2);
+
+          // Random spawn position
+          powerup.x = numz.randomIntBetween(0, canvas.width);
+          powerup.y = numz.randomIntBetween(0, canvas.height);
+          
+          // Return your shiny new powerup
+
+          return powerup;
+        },
+
         makeOrb() {
           const orb = draw.randomCircleInArea(canvas, false, true, '#999', 2);
           // console.log(`rad: ${orb.radius}`);
