@@ -37,6 +37,9 @@
           
         orb = opspark.playa.orb(assets, fx, messenger)
           .spawn(25);
+        
+        gravityWellPowerup = opspark.playa.gravityWellPowerup(assets, fx, messenger)
+          .spawn(1);
       
       game.view.addChild(view.container);
       

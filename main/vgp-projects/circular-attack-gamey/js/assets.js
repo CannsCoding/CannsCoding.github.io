@@ -49,6 +49,11 @@
         phyz.reboundCircularAssetInArea(this, canvas);
       }
 
+      function updateGravityWell(event) {
+        phyz.updateVelocity(this, 0, 0);
+        phyz.reboundCircularAssetInArea(this, canvas);
+      }
+
       function updateProjectile(impact) {
         phyz.reboundCircularAssetInArea(this, canvas);
       }
@@ -129,6 +134,30 @@
 
           return ship;
         },
+        makeShieldPowerup() {
+          // Create a random circular powerup in the canvas
+          const shield = draw.randomCircleInArea(canvas, false, true, '#00f', 3); // blue color, radius 3
+          Object.assign(shield, phyz.makeBody('shieldPowerup', { 
+            density: shield.radius / 10,       // lighter density for small powerup
+            volatility: shield.radius * 0.001, // small random movement
+          }));
+
+          // Give it some random initial velocity
+          phyz.addRandomVelocity(shield, canvas);
+
+          // Set its update function (like orb or gravity well)
+          shield.update = function() {
+            phyz.updateVelocity(this, 0, 0);
+            phyz.reboundCircularAssetInArea(this, canvas);
+          };
+
+          // Optional: rasterize to improve rendering performance
+          shield.snapToPixel = true;
+          const rad = shield.radius + 2;
+          shield.cache(-rad, -rad, rad * 2, rad * 2);
+
+          return shield;
+        },
         makeOrb() {
           const orb = draw.randomCircleInArea(canvas, false, true, '#999', 2);
           // console.log(`rad: ${orb.radius}`);
@@ -147,6 +176,25 @@
           // orb.cache(-rad, -rad, rad * 2, rad * 2);
           
           return orb;
+        },
+        makeGravityWellPowerup() {
+          const gravityWell = draw.randomCircleInArea(canvas, false, true, '#999', 2);
+          // console.log(`rad: ${orb.radius}`);
+          // console.log(`den: ${orb.radius / 20 * 0.5}`);
+          Object.assign(gravityWell, phyz.makeBody('gravityWell', { 
+            density: gravityWell.radius / 20 * 0.5,
+            volatility: gravityWell.radius * 0.0001,
+          }));
+          phyz.addRandomVelocity(gravityWell, canvas);
+          gravityWell.update = updateGravityWell;
+          
+          // TODO: why is caching killing the cross on the orb?
+          // rasterize the vector graphic, basically creating a bitmap //
+          // orb.snapToPixel = true;
+          // const rad = orb.radius + 2;
+          // orb.cache(-rad, -rad, rad * 2, rad * 2);
+          
+          return gravityWell;
         },
         centerOnStage,
       };
