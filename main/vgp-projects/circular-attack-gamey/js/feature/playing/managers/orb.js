@@ -38,6 +38,7 @@
           }
         },
         orbManager = {
+          active,
           getNumberActive() {
             return active.length;
           },

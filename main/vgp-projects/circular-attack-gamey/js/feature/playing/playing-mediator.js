@@ -37,7 +37,8 @@
           
         orb = opspark.playa.orb(assets, fx, messenger)
           .spawn(25);
-        
+
+        // gravity well powerup
         gravityWellPowerup = opspark.playa.gravityWell(assets, fx, messenger)
           .spawn(1);
       
@@ -93,7 +94,30 @@
             controls.activate();
             hud.activate();
 
-            game.addUpdateable(fx, ship, shipTwo, space);
+            /////////////////////////////////////////////
+            // ADD GRAVITY WELL UPDATE WRAPPER
+            /////////////////////////////////////////////
+            const gravityWellUpdater = {
+              update: function(event) {
+                // collect everything gravity wells should pull
+                let things = [];
+
+                things.push(ship);
+                things.push(shipTwo);
+
+                for (let i = 0; i < orb.active.length; i++) {
+                  things.push(orb.active[i]);
+                }
+
+                // update the gravity wells
+                if (gravityWellPowerup.updateAll) {
+                  gravityWellPowerup.updateAll(things, event.delta);
+                }
+              }
+            };
+            /////////////////////////////////////////////
+
+            game.addUpdateable(fx, ship, shipTwo, space, gravityWellUpdater);
             
             // orbManager.on('EXPLOSION', onOrbExplosion);
             messenger.on('EXPLOSION', onExplosion);
