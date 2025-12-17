@@ -1,0 +1,31 @@
+{
+  "name": "gameLibTemp",
+  "main": "index.js",
+  "homepage": "https://github.com/CannsCoding/gamelib-temp",
+  "description": "",
+  "keywords": [
+    "video-games"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "version": "0.3.1",
+  "_release": "0.3.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.1",
+    "commit": "45d2547745991b56f85708863be7709d740b9ee6"
+  },
+  "_source": "https://github.com/CannsCoding/gamelib-temp.git",
+  "_target": "^0.3.1",
+  "_originalSource": "https://github.com/CannsCoding/gamelib-temp.git",
+  "_direct": true
+}

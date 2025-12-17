@@ -31,7 +31,7 @@
     
     
     // also check if the ship needs to rebound off a boundary //
-    reboundCircularAssetInArea(this, canvas);
+    
   };
 
   assets.centerOnStage(ship, canvas);

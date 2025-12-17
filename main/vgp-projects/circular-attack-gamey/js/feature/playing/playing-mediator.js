@@ -94,9 +94,9 @@
             controls.activate();
             hud.activate();
 
-            /////////////////////////////////////////////
+            
             // ADD GRAVITY WELL UPDATE WRAPPER
-            /////////////////////////////////////////////
+            
             const gravityWellUpdater = {
               update: function(event) {
                 // collect everything gravity wells should pull

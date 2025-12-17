@@ -84,21 +84,9 @@
       }
       
       function handleCollision(impact, body) {
-        if (body.type === this.type) return;
-
-        if (this.integrity > 0) {
-          console.log(impact);
-          this.integrity -= impact;
-          if (this.integrity <= 0) {
-            fx
-              .makeEmitter(2, 3, "rgba(214, 36, 84, 0.2)", null, [
-                new Proton.RandomDrift(5, 0, .35)
-              ])
-              .emit({ x: this.x, y: this.y }, 0.5);
-            pool.recycle(this);
-            messenger.dispatch({ type: 'EXPLOSION', source: 'gravityWell', target: this, incoming: body });
-          }
-        }
+        // gravity wells are indestructible
+        // collisions are intentionally ignored
+        return;
       }
 
       // return GravityWell manager
